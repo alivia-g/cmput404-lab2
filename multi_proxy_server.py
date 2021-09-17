@@ -9,14 +9,14 @@ BUFFER_SIZE = 1024
 
 # get ip
 def get_remote_ip(extern_host):
-    print('Getting IP for {host}')
+    print('Getting IP for {extern_host}')
     try:
-        remote_ip = socket.gethostbyname(host)
+        remote_ip = socket.gethostbyname(extern_host)
     except socket.gaierror:
         print('Hostname could not be resolved. Exiting...')
         sys.exit()
     
-    print(f'IP address of {host} is {remote_ip}')
+    print(f'IP address of {extern_host} is {remote_ip}')
     return remote_ip
 
 def handle_request(addr, conn, proxy_end):
