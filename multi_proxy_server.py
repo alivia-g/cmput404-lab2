@@ -8,7 +8,7 @@ PORT = 8001
 BUFFER_SIZE = 1024
 
 # get ip
-def get_remote_ip():
+def get_remote_ip(extern_host):
     print('Getting IP for {host}')
     try:
         remote_ip = socket.gethostbyname(host)
